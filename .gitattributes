@@ -1,0 +1,2 @@
+# Preserve the exact bytes of the validated static release, including bundled data and fonts.
+* -text
