@@ -8,7 +8,7 @@ No es una plataforma oficial del SFE. No constituye recomendación de aplicació
 
 ## Consulta
 
-- Selector **Celular / PC**: Celular ofrece una columna y un panel compacto de hasta 480 px, incluso desde una computadora; PC ofrece una vista amplia de al menos 760 px, desplazable horizontalmente dentro del panel en teléfonos. El selector queda fuera de ese desplazamiento.
+- **Presentación automática para celular y PC**, sin selector: una columna hasta 600 px y distribución amplia y fluida por encima. No se fuerza ancho de escritorio ni desplazamiento horizontal en teléfonos o tablets.
 - Dos entradas principales: **Molécula** y **Nombre comercial**.
 - Autocompletado con hasta **6 coincidencias** y opción para mostrar las demás en un panel de altura limitada.
 - Filtros adicionales de cultivo, plaga/maleza, grupo de productos, tipo y estado.
@@ -45,7 +45,7 @@ Este sitio es de consulta documental y educativa. El material de referencia pued
 
 ## Privacidad y funcionamiento
 
-La vista inicial sigue el ancho de la pantalla (Celular hasta 600 px) y se adapta al redimensionar mientras no haya una elección manual. Al elegir Celular o PC, se guarda únicamente esa preferencia en el almacenamiento local del navegador (`fitoconsulta.layout`). Cambiar de modo no altera búsquedas, filtros, URL ni datos. Si el almacenamiento está bloqueado, el cambio funciona pero no se recuerda al recargar. Ambos modos requieren un navegador moderno con consultas CSS de contenedor y también funcionan desde archivo sin conexión.
+La presentación se adapta automáticamente mediante CSS al ancho disponible, al girar el teléfono y al redimensionar la ventana, sin modificar búsquedas, filtros, URL, cultivo seleccionado ni datos. No hay botones de vista ni preferencias que elegir o guardar. Las preferencias manuales de versiones anteriores se ignoran. Funciona también con almacenamiento bloqueado y desde archivo sin conexión.
 
 La búsqueda y el filtrado se realizan en el navegador. La app no incorpora cuentas, analítica ni consultas automáticas al SFE o a los clasificadores. Los enlaces a las fuentes se abren solo a petición. GitHub Pages sirve los archivos y está sujeto a las políticas de GitHub.
 
@@ -59,4 +59,4 @@ Sitio estático con GitHub Pages desde la rama `main`, carpeta raíz. El archivo
 
 Solo se incluyen archivos de publicación. Las evidencias HTML, CSV de trabajo, respuestas de consulta, scripts, pruebas, logs y dependencias del proyecto completo no se publican aquí. Las referencias a carpetas de trabajo en la documentación de cobertura o fuentes se refieren al proyecto local, no a carpetas incluidas en este repositorio.
 
-La versión de origen pasó 42 pruebas unitarias y 41 de navegador (83 en total), incluidas regresión de datos, móvil, teclado, accesibilidad automática, carga de fuentes y apertura local sin conexión; ambos modos de vista, persistencia, conservación de búsquedas, impresión, HTML anterior en caché y almacenamiento bloqueado. Las pruebas automáticas no sustituyen una auditoría manual completa.
+La versión de origen pasó 42 pruebas unitarias y 41 de navegador (83 en total), incluidas regresión de datos, móvil, teclado, accesibilidad automática, carga de fuentes y apertura local sin conexión; adaptación automática, ausencia de selector, preferencias antiguas ignoradas, conservación de búsquedas y cultivo, ausencia de desbordamiento, impresión, HTML anterior en caché y almacenamiento bloqueado. Las pruebas automáticas no sustituyen una auditoría manual completa.

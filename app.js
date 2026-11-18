@@ -210,29 +210,9 @@ function restore(){
  if(state.crop||state.pestKey||state.type||state.status||state.category||state.view==='inventory')setExtraOpen(true);
  if(state.type||state.status||state.category||state.view==='inventory')document.querySelector('.more-options').open=true;
 }
-// Solo cambia la presentación: nunca los filtros, resultados ni los datos.
-function initLayout(){
- // Una copia anterior del HTML en caché no debe bloquear la consulta.
- if(!$('layout-mobile')||!$('layout-desktop'))return;
- const storageKey='fitoconsulta.layout';
- const media=window.matchMedia('(max-width:600px)');
- let preferred=null;
- try{const saved=localStorage.getItem(storageKey);if(saved==='mobile'||saved==='desktop')preferred=saved;}catch{}
- function apply(mode,announce=false){
-  document.documentElement.dataset.layout=mode;
-  $('layout-mobile').setAttribute('aria-pressed',String(mode==='mobile'));
-  $('layout-desktop').setAttribute('aria-pressed',String(mode==='desktop'));
-  if(announce)$('layout-status').textContent=mode==='mobile'?'Modo celular: vista compacta de una columna.':'Modo PC: vista amplia; en pantallas pequeñas puedes deslizar el contenido horizontalmente.';
- }
- for(const mode of ['mobile','desktop'])$('layout-'+mode).addEventListener('click',()=>{
-  preferred=mode;
-  try{localStorage.setItem(storageKey,mode);}catch{}
-  apply(mode,true);
- });
- media.addEventListener('change',()=>{if(!preferred)apply(media.matches?'mobile':'desktop');});
- apply(preferred||(media.matches?'mobile':'desktop'));
-}
-initLayout();
+// El diseño se adapta solo mediante CSS, sin leer preferencias guardadas.
+// Retirar también el selector si llega una copia anterior del HTML en caché.
+document.querySelector('.layout-toolbar')?.remove();
 initAutocomplete();
 for(const [id,key]of [['crop-filter','crop'],['pest-filter','pestKey'],['type-filter','type'],['status-filter','status'],['category-filter','category']])$(id).addEventListener('change',e=>{clearTimeout(timer);state[key]=e.target.value;state.page=1;render();});
 $('include-inventory').addEventListener('change',e=>{clearTimeout(timer);state.view=e.target.checked?'inventory':'uses';state.page=1;render();});
