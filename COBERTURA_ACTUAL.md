@@ -43,6 +43,8 @@ Censos fungicida y herbicida: **2026-11-17T22:57:56-06:00** y **2026-11-18T06:24
 
 ## Pantalla y controles
 
+El selector **Celular / PC** cambia solo la presentación: Celular limita el panel a 480 px y usa una columna; PC usa un diseño amplio de al menos 760 px, con desplazamiento horizontal dentro del panel en teléfonos. El selector permanece fuera de ese desplazamiento. La elección inicial sigue el ancho (Celular hasta 600 px); la elección manual se conserva localmente y no cambia búsquedas, URL ni datos. Funciona sin conexión y con almacenamiento bloqueado, aunque en este último caso no se recuerda al recargar. Se usan consultas CSS de contenedor, disponibles en navegadores modernos. La impresión conserva la ficha sin el selector.
+
 La tipografía utiliza **Roboto con peso 300 en toda la interfaz**, con alternativas Helvetica y Arial. La escala legible mantiene campos y datos de ficha a 16 px, ingredientes a 15 px, nombres comerciales a 18 px, códigos a 13 px e información auxiliar desde 12 px; la jerarquía se distingue por tamaño, color y espacio. Se comprobó el diseño sin desbordamiento a 320, 390, 768 y 1440 px. Roboto normal e itálica están integradas para funcionar sin conexión y sin CDN; se incluye la licencia SIL OFL 1.1 en `fonts/`.
 
 Se mantienen **Molécula** y **Nombre comercial** como las únicas dos entradas principales. Cada entrada tiene autocompletado con un máximo inicial de seis coincidencias; «Mostrar el resto de los resultados» permite consultar las demás en un panel de altura limitada con desplazamiento. No se muestra el catálogo completo al enfocar un campo vacío; cada nueva búsqueda restablece el límite. Las sugerencias repetidas por mayúsculas o acentos se consolidan sin fusionar registros comerciales. Se mantiene selección con teclado, ratón y pantalla táctil. Las marcas e ingredientes llevan etiquetas FRAC/HRAC/IRAC de colores orientativos, no oficiales. Los estados pendientes y parciales se distinguen en gris; «sin código» no equivale a HRAC 0 ni a IRAC UN.
@@ -53,7 +55,7 @@ Cultivo y plaga/maleza permanecen ocultos inicialmente. En **Más opciones → G
 
 - Todos los campos principales de las fichas fueron cotejados con sus HTML; las plagas y estadíos de invertebrados también fueron cotejados.
 - Comparación como multiconjuntos contra los CSV originales: **6.315 filas fungicidas, 40.004 herbicidas y 6.868 insecticidas** conservan registro, cultivo, plaga/maleza, dosis, unidades, volúmenes, intervalos, carencia, reingreso, alcance y estadío cuando corresponde.
-- **42 pruebas unitarias y 34 de navegador aprobadas**, sin omisiones: regresión FRAC/HRAC, IRAC, mezclas, pendientes, registros compartidos, CSV, móvil, offline, teclado y accesibilidad automática.
+- **42 pruebas unitarias y 41 de navegador aprobadas**, sin omisiones: regresión FRAC/HRAC, IRAC, mezclas, pendientes, registros compartidos, CSV, móvil, offline, teclado y accesibilidad automática; ambos modos, selección y persistencia de vista, conservación de búsqueda y URL, impresión y almacenamiento bloqueado.
 - La app no consulta el SFE ni los clasificadores automáticamente. Las fechas son documentales; no certifican vigencia jurídica, exhaustividad nacional ni autorizan aplicaciones.
 
 En el proyecto completo, `../base_integrada/` contiene:
