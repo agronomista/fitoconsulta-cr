@@ -1,0 +1,199 @@
+{
+  "title": "FitoConsulta CR",
+  "schemaVersion": 5,
+  "source": "https://app.sfe.go.cr/SFEInsumos/aspx/Insumos/ConsultaRegistroPlaguicida.aspx",
+  "censusDate": "2026-11-17T22:57:56-06:00",
+  "censusDates": [
+    "2026-11-17T22:57:56-06:00",
+    "2026-11-18T06:24:58-06:00",
+    "2026-11-18T09:37:51-06:00"
+  ],
+  "builtAt": "2026-11-18T10:12:25-06:00",
+  "totals": {
+    "inventory": 2541,
+    "productsWithUses": 1827,
+    "uses": 10207,
+    "rows": 53184,
+    "crops": 233
+  },
+  "sources": [
+    {
+      "category": "fungicida",
+      "classes": 15,
+      "censusDate": "2026-11-17T22:57:56-06:00",
+      "inventory": 759,
+      "productsWithUses": 565,
+      "withoutUses": 194,
+      "uses": 3621,
+      "rows": 6315,
+      "directory": "nacional_todos_cultivos"
+    },
+    {
+      "category": "herbicida",
+      "classes": 4,
+      "censusDate": "2026-11-18T06:24:58-06:00",
+      "inventory": 1009,
+      "productsWithUses": 720,
+      "withoutUses": 289,
+      "uses": 3480,
+      "rows": 40004,
+      "directory": "herbicidas_todos_cultivos"
+    },
+    {
+      "category": "insecticida",
+      "classes": 21,
+      "censusDate": "2026-11-18T09:37:51-06:00",
+      "inventory": 774,
+      "productsWithUses": 543,
+      "withoutUses": 231,
+      "uses": 3109,
+      "rows": 6868,
+      "directory": "insecticidas_todos_cultivos"
+    }
+  ],
+  "validation": {
+    "fungicida": {
+      "clases_consultadas": 15,
+      "registros_censo": 1043,
+      "estados_censo": {
+        "Activo": 734,
+        "Activo – Producto de uso restringido": 25,
+        "Cancelado": 282,
+        "Suspendido": 2
+      },
+      "activos_incluido_uso_restringido": 759,
+      "activos_por_tipo": {
+        "Químico Formulado o Sustancia Afín": 544,
+        "Ingrediente Activo Grado Técnico (IAGT)": 192,
+        "Microbiológico": 6,
+        "Botánico": 16,
+        "Invertebrado": 1
+      },
+      "registros_con_fichas_cultivo": 565,
+      "registros_sin_fichas_cultivo": 194,
+      "sin_cultivos_por_tipo": {
+        "Ingrediente Activo Grado Técnico (IAGT)": 192,
+        "Invertebrado": 1,
+        "Microbiológico": 1
+      },
+      "filas_detalle": 6315,
+      "fichas_cultivo_verificadas": 3621,
+      "cultivos_nombre_y_cientifico_distintos": 151,
+      "cultivos_catalogo": 346,
+      "cultivos_catalogo_con_coincidencia": 153,
+      "censo_conciliado": true,
+      "campos_coinciden_html": true,
+      "errores_extraccion": 0
+    },
+    "herbicida": {
+      "clases_consultadas": 4,
+      "registros_censo": 1201,
+      "estados_censo": {
+        "Activo": 930,
+        "Activo – Producto de uso restringido": 79,
+        "Cancelado": 191,
+        "Suspendido": 1
+      },
+      "activos_incluido_uso_restringido": 1009,
+      "activos_por_tipo": {
+        "Químico Formulado o Sustancia Afín": 723,
+        "Ingrediente Activo Grado Técnico (IAGT)": 286
+      },
+      "registros_con_fichas_cultivo": 720,
+      "registros_sin_fichas_cultivo": 289,
+      "sin_cultivos_por_tipo": {
+        "Ingrediente Activo Grado Técnico (IAGT)": 286,
+        "Químico Formulado o Sustancia Afín": 3
+      },
+      "filas_detalle": 40004,
+      "fichas_cultivo_verificadas": 3480,
+      "cultivos_nombre_y_cientifico_distintos": 89,
+      "cultivos_catalogo": 346,
+      "cultivos_catalogo_con_coincidencia": 92,
+      "censo_conciliado": true,
+      "campos_coinciden_html": true,
+      "errores_extraccion": 0
+    },
+    "insecticida": {
+      "clases_consultadas": 21,
+      "registros_censo": 1181,
+      "estados_censo": {
+        "Activo": 625,
+        "Cancelado": 406,
+        "Activo – Producto de uso restringido": 149,
+        "Suspendido": 1
+      },
+      "activos_incluido_uso_restringido": 774,
+      "activos_por_tipo": {
+        "Invertebrado": 51,
+        "Químico Formulado o Sustancia Afín": 471,
+        "Ingrediente Activo Grado Técnico (IAGT)": 228,
+        "Microbiológico": 18,
+        "Botánico": 6
+      },
+      "registros_con_fichas_cultivo": 543,
+      "registros_sin_fichas_cultivo": 231,
+      "sin_cultivos_por_tipo": {
+        "Químico Formulado o Sustancia Afín": 3,
+        "Ingrediente Activo Grado Técnico (IAGT)": 228
+      },
+      "filas_detalle": 6868,
+      "fichas_cultivo_verificadas": 3109,
+      "cultivos_nombre_y_cientifico_distintos": 168,
+      "cultivos_catalogo": 346,
+      "cultivos_catalogo_con_coincidencia": 171,
+      "censo_conciliado": true,
+      "campos_coinciden_html": true,
+      "plagas_estadios_invertebrados_coinciden_html": true,
+      "errores_extraccion": 0
+    }
+  },
+  "sourceHashes": {
+    "nacional_todos_cultivos/fungicidas_nacional_activos_clasificados.csv": "08d2088e1500166f8defd63aec86ca925b15df268621ab7375d3e3780ba1d88e",
+    "nacional_todos_cultivos/fungicidas_nacional_detalle_no_tecnicos.csv": "3b30a5b3f5f1e666903f6dc391bf807a6bcd227defb59799563846e2785dbdfa",
+    "nacional_todos_cultivos/validacion_nacional.json": "62964ea6e710d2beedb43d086f1e3a1166a0300947677f65cbd5e9b3f86c179a",
+    "herbicidas_todos_cultivos/herbicidas_nacional_activos_clasificados.csv": "3a5d8031601115803cd8f035d1df7453af28e727ee71bb0a25cfcf6698c092e8",
+    "herbicidas_todos_cultivos/herbicidas_nacional_detalle_no_tecnicos.csv": "e4b7646f732ce386ce0a954d2b0194b4d71baa91d642a6bafd02771a38be6ef6",
+    "herbicidas_todos_cultivos/validacion_nacional.json": "cad36eac46851ac960eba9ad565317bc6df77c2ac808064176bf436d917d85ad",
+    "insecticidas_todos_cultivos/insecticidas_nacional_activos_clasificados.csv": "2423381854107a87759959b86557bba132c3a0247220b08342b93d9c2f6488bd",
+    "insecticidas_todos_cultivos/insecticidas_nacional_detalle_no_tecnicos.csv": "4c355286ce387b7a2f9d238b17d57336bb80ec7837fbb467b992003bd4faa00d",
+    "insecticidas_todos_cultivos/validacion_nacional.json": "fd57a8a7bfe1903edf00aa54db5702bcc1b435afe1980d21969d02abf38f7d21"
+  },
+  "reconciliation": {
+    "sharedRecords": [
+      "4931"
+    ],
+    "deduplicatedRows": 3,
+    "deduplicatedUses": 3
+  },
+  "scope": "15 clases que contienen fungicida; 4 clases que contienen herbicida; 21 clases que contienen insecticida. Sin filtros de tipo o cultivo. Solo registros activos, incluido uso restringido. No certifica exhaustividad legal ni vigencia en tiempo real.",
+  "hracStatus": "HRAC 2026: 76 denominaciones con código y 1 pendiente(s)",
+  "frac": {
+    "version": "2026",
+    "source": "https://www.frac.info/media/s1zfrjqa/frac-code-list-2026.pdf",
+    "sourceSha256": "18147746e0da078c5e0047a4820cdc00faa09772d7002b84135ee159e589987e",
+    "catalogSha256": "acc0f1c0d8d990f05cf2a78220704fea267d26d8547b9ba2d86053bbc11585ef",
+    "ingredients": 138,
+    "assigned": 108,
+    "withPubChem": 95
+  },
+  "hrac": {
+    "version": "2026",
+    "source": "https://hracglobal.com/getdoc.php?file=2026-Herbicide-MoA-Classification-Master-List-without-Molecular-Structures.xlsx",
+    "sourceSha256": "44f7b0727c5eb8a726a8631e5a266055b31c849e72f046795d0f94582848b1a2",
+    "catalogSha256": "0c6d2b3a70ee4fd0a344350d85db1387715345a46aa40bbec210d27bbfa07976",
+    "entries": 77,
+    "assigned": 76,
+    "pending": 1
+  },
+  "irac": {
+    "version": "11.5 (febrero 2026)",
+    "sourceUrl": "https://irac-online.org/documents/moa-classification/",
+    "sourceSha256": "74641b0f56bcfb46574fd0dc815ee136170af66385950ad61045a0692ea750d6",
+    "entries": 140,
+    "assigned": 96,
+    "pending": 16,
+    "outsideScope": 28,
+    "catalogSha256": "2bcf6d9aca04ecb8c9275bd646ee958b0be287e62302202af3595b3c58c3d7d3"
+  }
+}

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#163d32">
+<meta name="description" content="Consulta registros del SFE por molécula o nombre comercial. Revisa los cultivos, plagas o malezas y dosis dentro de cada ficha.">
+<title>FitoConsulta CR · Consulta simple</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="fonts/roboto.css"><link rel="stylesheet" href="styles.css">
+<script defer src="data.js"></script><script defer src="core.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#consulta">Saltar a la consulta</a>
+<svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 4C9 2 3 8 6 15c4 7 15 3 14-11Z"/><path d="M4 21 16 9M9 16v-5m0 5h5"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+<symbol id="i-chevron" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+</svg>
+<header class="site-header"><a class="brand" href="#" aria-label="FitoConsulta CR, inicio"><span class="brand-icon"><svg><use href="#i-leaf"/></svg></span><span>FitoConsulta <small>CR</small><svg class="cr-flag" viewBox="0 0 30 18" aria-hidden="true" focusable="false"><path fill="#002b7f" d="M0 0h30v18H0z"/><path fill="#fff" d="M0 3h30v12H0z"/><path fill="#ce1126" d="M0 6h30v6H0z"/></svg></span></a><span class="header-note">Consulta independiente · Costa Rica</span></header>
+<main id="consulta">
+<section class="intro" aria-labelledby="page-title"><p class="eyebrow">ENCUENTRA EL PRODUCTO</p><h1 id="page-title">¿Qué quieres consultar?</h1><p>Busca por molécula, por nombre comercial o por ambos.</p></section>
+<section class="search-panel" aria-label="Buscar productos">
+<p id="autocomplete-help" class="visually-hidden">Escribe para ver hasta seis sugerencias. Usa las flechas para recorrerlas, Enter para elegir y Escape para cerrar. Con Tab puedes acceder a Mostrar el resto de los resultados.</p>
+<div class="primary-fields">
+<div class="field autocomplete"><label for="molecule-input">Molécula</label><div class="search-control"><svg aria-hidden="true"><use href="#i-search"/></svg><input id="molecule-input" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="molecule-options" aria-describedby="autocomplete-help" placeholder="Ej.: Azufre, Azoxistrobina…" autocomplete="off" spellcheck="false"></div><div class="suggestions" id="molecule-suggestions" hidden><p class="suggestions-count" role="status"></p><div id="molecule-options" class="suggestions-list" role="listbox" tabindex="-1" aria-label="Sugerencias de molécula"></div><button class="suggestions-more" type="button" hidden>Mostrar el resto de los resultados</button></div></div>
+<div class="field autocomplete"><label for="commercial-input">Nombre comercial</label><div class="search-control"><svg aria-hidden="true"><use href="#i-search"/></svg><input id="commercial-input" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="commercial-options" aria-describedby="autocomplete-help" placeholder="Ej.: Acoidal, Amistar…" autocomplete="off" spellcheck="false"></div><div class="suggestions" id="commercial-suggestions" hidden><p class="suggestions-count" role="status"></p><div id="commercial-options" class="suggestions-list" role="listbox" tabindex="-1" aria-label="Sugerencias de nombre comercial"></div><button class="suggestions-more" type="button" hidden>Mostrar el resto de los resultados</button></div></div>
+</div>
+<div class="search-actions"><button id="filters-toggle" class="subtle-button" aria-expanded="false" aria-controls="extra-filters">Cultivo y plaga / maleza <svg aria-hidden="true"><use href="#i-chevron"/></svg><span id="extra-count" class="filter-count" hidden></span></button><button class="text-button" id="clear-filters">Limpiar búsqueda</button></div>
+<div id="extra-filters" class="extra-filters" hidden>
+<div class="extra-grid"><div class="field"><label for="crop-filter">Cultivo · nombre común y científico</label><select id="crop-filter"><option value="">Todos los cultivos con usos publicados</option></select></div><div class="field"><label for="pest-filter">Plaga o maleza · nombre común y científico</label><select id="pest-filter"><option value="">Todas las plagas publicadas</option></select></div></div>
+<p class="hint">Las listas muestran las opciones compatibles con tu búsqueda. La dosis siempre pertenece al producto y al cultivo, no a la molécula en general.</p>
+<details class="more-options"><summary>Más opciones</summary><div class="extra-grid"><div class="field"><label for="category-filter">Grupo de productos</label><select id="category-filter"><option value="">Todos los grupos disponibles</option><option value="fungicida">Fungicidas</option><option value="herbicida">Herbicidas</option><option value="insecticida">Insecticidas</option></select></div><div class="field"><label for="type-filter">Tipo de producto</label><select id="type-filter"><option value="">Todos los tipos</option><option value="1">Químico formulado o sustancia afín</option><option value="3">Botánico</option><option value="4">Microbiológico</option><option value="2">Ingrediente grado técnico (IAGT)</option><option value="8">Invertebrado</option></select></div><div class="field"><label for="status-filter">Estado del registro</label><select id="status-filter"><option value="">Todos los activos</option><option value="regular">Sin marca de uso restringido</option><option value="restricted">Uso restringido</option></select></div></div><label class="check-field"><input id="include-inventory" type="checkbox"> Incluir registros sin fichas de cultivo e ingredientes de grado técnico</label><button class="button secondary" id="export-csv">Descargar resultados en CSV</button><p class="hint">Los IAGT no son productos listos para aplicar. Sin fichas de cultivo, no se les atribuyen dosis ni plagas.</p></details>
+</div>
+</section>
+<p class="start-hint" id="start-hint">Los productos aparecerán al buscar. <button class="text-button" id="browse-all">Ver todos los productos</button></p>
+<section class="results" id="results-section" aria-labelledby="results-title" hidden><div class="results-heading"><h2 id="results-title" aria-live="polite" aria-atomic="true">Productos</h2><span id="filter-description"></span></div><p class="code-legend">FRAC: fungicidas · HRAC: herbicidas · IRAC: insecticidas. Colores orientativos, no oficiales: consulta el código completo. «Sin código» no equivale a HRAC 0 ni a IRAC UN.</p><div id="product-list" class="product-list"></div><div class="empty-state" id="empty-state" hidden><h3>No encontramos productos</h3><p>Prueba otro nombre o quita un filtro. La ausencia de resultados no demuestra ausencia de autorización.</p><button class="button primary" id="empty-reset">Limpiar búsqueda</button></div><nav class="pagination" aria-label="Páginas de productos"><span id="page-info"></span><div><button id="page-prev" class="icon-button" aria-label="Página anterior">←</button><span id="page-current"></span><button id="page-next" class="icon-button" aria-label="Página siguiente">→</button></div></nav></section>
+<p class="safety-note">Consulta documental, no recomendación de aplicación. Verifica siempre la etiqueta vigente y las restricciones del registro.</p>
+</main>
+<footer><span>Base local · corte <strong id="cutoff-date"></strong> · sin actualización automática</span><button id="method-open" class="text-button">Fuente y alcance</button></footer>
+<dialog id="product-dialog" class="product-dialog" aria-labelledby="product-title"><div id="product-content"></div></dialog>
+<dialog id="method-dialog" class="method-dialog" aria-labelledby="method-title"><div class="modal-header"><div><p class="eyebrow">TRANSPARENCIA</p><h2 id="method-title">Fuente y alcance</h2></div><button class="icon-button" id="method-close" aria-label="Cerrar metodología"><svg><use href="#i-close"/></svg></button></div><div id="method-content" class="method-body"></div></dialog>
+<div class="toast" id="toast" role="status" hidden></div>
+<noscript><p class="fatal-error">Activa JavaScript para usar los filtros. Los CSV originales siguen disponibles en la carpeta nacional_todos_cultivos.</p></noscript>
+</body></html>
