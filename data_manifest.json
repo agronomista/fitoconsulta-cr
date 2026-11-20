@@ -2,52 +2,52 @@
   "title": "FitoConsulta CR",
   "schemaVersion": 5,
   "source": "https://app.sfe.go.cr/SFEInsumos/aspx/Insumos/ConsultaRegistroPlaguicida.aspx",
-  "censusDate": "2026-11-17T22:57:56-06:00",
+  "censusDate": "2026-11-19T11:32:12+00:00",
   "censusDates": [
-    "2026-11-17T22:57:56-06:00",
-    "2026-11-18T06:24:58-06:00",
-    "2026-11-18T09:37:51-06:00"
+    "2026-11-19T11:32:12+00:00",
+    "2026-11-19T15:14:04+00:00",
+    "2026-11-19T19:13:38+00:00"
   ],
-  "builtAt": "2026-11-18T10:12:25-06:00",
+  "builtAt": "2026-11-20T02:54:46+00:00",
   "totals": {
     "inventory": 2541,
     "productsWithUses": 1827,
-    "uses": 10207,
-    "rows": 53184,
+    "uses": 10212,
+    "rows": 53305,
     "crops": 233
   },
   "sources": [
     {
       "category": "fungicida",
       "classes": 15,
-      "censusDate": "2026-11-17T22:57:56-06:00",
+      "censusDate": "2026-11-19T11:32:12+00:00",
       "inventory": 759,
       "productsWithUses": 565,
       "withoutUses": 194,
-      "uses": 3621,
-      "rows": 6315,
+      "uses": 3625,
+      "rows": 6393,
       "directory": "nacional_todos_cultivos"
     },
     {
       "category": "herbicida",
       "classes": 4,
-      "censusDate": "2026-11-18T06:24:58-06:00",
+      "censusDate": "2026-11-19T15:14:04+00:00",
       "inventory": 1009,
       "productsWithUses": 720,
       "withoutUses": 289,
       "uses": 3480,
-      "rows": 40004,
+      "rows": 40018,
       "directory": "herbicidas_todos_cultivos"
     },
     {
       "category": "insecticida",
       "classes": 21,
-      "censusDate": "2026-11-18T09:37:51-06:00",
+      "censusDate": "2026-11-19T19:13:38+00:00",
       "inventory": 774,
       "productsWithUses": 543,
       "withoutUses": 231,
-      "uses": 3109,
-      "rows": 6868,
+      "uses": 3110,
+      "rows": 6897,
       "directory": "insecticidas_todos_cultivos"
     }
   ],
@@ -76,13 +76,14 @@
         "Invertebrado": 1,
         "Microbiológico": 1
       },
-      "filas_detalle": 6315,
-      "fichas_cultivo_verificadas": 3621,
+      "filas_detalle": 6393,
+      "fichas_cultivo_verificadas": 3625,
       "cultivos_nombre_y_cientifico_distintos": 151,
       "cultivos_catalogo": 346,
       "cultivos_catalogo_con_coincidencia": 153,
       "censo_conciliado": true,
       "campos_coinciden_html": true,
+      "plagas_estadios_invertebrados_coinciden_html": true,
       "errores_extraccion": 0
     },
     "herbicida": {
@@ -105,13 +106,14 @@
         "Ingrediente Activo Grado Técnico (IAGT)": 286,
         "Químico Formulado o Sustancia Afín": 3
       },
-      "filas_detalle": 40004,
+      "filas_detalle": 40018,
       "fichas_cultivo_verificadas": 3480,
       "cultivos_nombre_y_cientifico_distintos": 89,
       "cultivos_catalogo": 346,
       "cultivos_catalogo_con_coincidencia": 92,
       "censo_conciliado": true,
       "campos_coinciden_html": true,
+      "plagas_estadios_invertebrados_coinciden_html": true,
       "errores_extraccion": 0
     },
     "insecticida": {
@@ -137,8 +139,8 @@
         "Químico Formulado o Sustancia Afín": 3,
         "Ingrediente Activo Grado Técnico (IAGT)": 228
       },
-      "filas_detalle": 6868,
-      "fichas_cultivo_verificadas": 3109,
+      "filas_detalle": 6897,
+      "fichas_cultivo_verificadas": 3110,
       "cultivos_nombre_y_cientifico_distintos": 168,
       "cultivos_catalogo": 346,
       "cultivos_catalogo_con_coincidencia": 171,
@@ -149,15 +151,15 @@
     }
   },
   "sourceHashes": {
-    "nacional_todos_cultivos/fungicidas_nacional_activos_clasificados.csv": "08d2088e1500166f8defd63aec86ca925b15df268621ab7375d3e3780ba1d88e",
-    "nacional_todos_cultivos/fungicidas_nacional_detalle_no_tecnicos.csv": "3b30a5b3f5f1e666903f6dc391bf807a6bcd227defb59799563846e2785dbdfa",
-    "nacional_todos_cultivos/validacion_nacional.json": "62964ea6e710d2beedb43d086f1e3a1166a0300947677f65cbd5e9b3f86c179a",
-    "herbicidas_todos_cultivos/herbicidas_nacional_activos_clasificados.csv": "3a5d8031601115803cd8f035d1df7453af28e727ee71bb0a25cfcf6698c092e8",
-    "herbicidas_todos_cultivos/herbicidas_nacional_detalle_no_tecnicos.csv": "e4b7646f732ce386ce0a954d2b0194b4d71baa91d642a6bafd02771a38be6ef6",
-    "herbicidas_todos_cultivos/validacion_nacional.json": "cad36eac46851ac960eba9ad565317bc6df77c2ac808064176bf436d917d85ad",
-    "insecticidas_todos_cultivos/insecticidas_nacional_activos_clasificados.csv": "2423381854107a87759959b86557bba132c3a0247220b08342b93d9c2f6488bd",
-    "insecticidas_todos_cultivos/insecticidas_nacional_detalle_no_tecnicos.csv": "4c355286ce387b7a2f9d238b17d57336bb80ec7837fbb467b992003bd4faa00d",
-    "insecticidas_todos_cultivos/validacion_nacional.json": "fd57a8a7bfe1903edf00aa54db5702bcc1b435afe1980d21969d02abf38f7d21"
+    "nacional_todos_cultivos/fungicidas_nacional_activos_clasificados.csv": "da378011e7b1c6f64d4c3b02182bbe3d977746d180c81cd45eee7de932447be1",
+    "nacional_todos_cultivos/fungicidas_nacional_detalle_no_tecnicos.csv": "a7b633405558a333e23b2b1b93109d0b14d0335787c1853b8da7b8d064a07dda",
+    "nacional_todos_cultivos/validacion_nacional.json": "21a7fb38b5693d2115cc9627345e23b7d352ff567daa9a0622eca6efca77f0a2",
+    "herbicidas_todos_cultivos/herbicidas_nacional_activos_clasificados.csv": "3591feb1bc5e7fa8afc8503a264b74c2c67934aa23073484c8bb6d970f066d2e",
+    "herbicidas_todos_cultivos/herbicidas_nacional_detalle_no_tecnicos.csv": "906b61547c367a7807efca9034b297337955c429c8e83065b7b3137ae5b00892",
+    "herbicidas_todos_cultivos/validacion_nacional.json": "b464715628684c420eb26a194d5ff1f094c50527ba0e2b59aea219a39219ca7a",
+    "insecticidas_todos_cultivos/insecticidas_nacional_activos_clasificados.csv": "03a6bb0099a1eb4b6ea9cabca9f806697f2d0092f40cd4bfd289f41cc9d48378",
+    "insecticidas_todos_cultivos/insecticidas_nacional_detalle_no_tecnicos.csv": "18ef6db02449808e6409769a035a7a2a2049b9a69868d3f8a0ed60ab030c8502",
+    "insecticidas_todos_cultivos/validacion_nacional.json": "776267ccd09ed4eb8225f19a9762662bb790ebdf83450a6275b11698381bc88e"
   },
   "reconciliation": {
     "sharedRecords": [
@@ -172,7 +174,7 @@
     "version": "2026",
     "source": "https://www.frac.info/media/s1zfrjqa/frac-code-list-2026.pdf",
     "sourceSha256": "18147746e0da078c5e0047a4820cdc00faa09772d7002b84135ee159e589987e",
-    "catalogSha256": "acc0f1c0d8d990f05cf2a78220704fea267d26d8547b9ba2d86053bbc11585ef",
+    "catalogSha256": "cfad7dc1eefa2df4c6425c88ae8c83e957f007a73be3bfd0536a08e315532068",
     "ingredients": 138,
     "assigned": 108,
     "withPubChem": 95
@@ -181,7 +183,7 @@
     "version": "2026",
     "source": "https://hracglobal.com/getdoc.php?file=2026-Herbicide-MoA-Classification-Master-List-without-Molecular-Structures.xlsx",
     "sourceSha256": "44f7b0727c5eb8a726a8631e5a266055b31c849e72f046795d0f94582848b1a2",
-    "catalogSha256": "0c6d2b3a70ee4fd0a344350d85db1387715345a46aa40bbec210d27bbfa07976",
+    "catalogSha256": "bc662cf9d81ab80b2cea17ee5c464c537caa2c841b04985a7f8ac0059209a4dd",
     "entries": 77,
     "assigned": 76,
     "pending": 1
@@ -194,6 +196,6 @@
     "assigned": 96,
     "pending": 16,
     "outsideScope": 28,
-    "catalogSha256": "2bcf6d9aca04ecb8c9275bd646ee958b0be287e62302202af3595b3c58c3d7d3"
+    "catalogSha256": "dffd41f9aa385a6372f38f8456c58640553976428c9823a679a869f12a51f0be"
   }
 }
