@@ -1,3 +1,5 @@
+> La cobertura vigente del último lote publicado se documenta en [COBERTURA_ACTUAL.md](COBERTURA_ACTUAL.md) y `data_manifest.json`; las cifras históricas de este README corresponden al corte que allí se indica.
+
 # FitoConsulta CR 🇨🇷
 
 Consulta documental independiente de registros de fungicidas, herbicidas e insecticidas del Servicio Fitosanitario del Estado (SFE) de Costa Rica.
