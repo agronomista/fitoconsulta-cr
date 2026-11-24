@@ -7,6 +7,13 @@
   'use strict';
   const norm = value => String(value ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('es').replace(/\s+/g, ' ').trim();
   const missing = value => !value || value === '-' || value === 'No informado en la ficha SFE';
+  function hasAerialApproval(value) {
+    if (missing(value)) return false;
+    const text = norm(value);
+    if (!/\d/.test(text)) return false;
+    if (/(^|\W)n\.?\s*\/?\s*a\.?(\W|$)|\bno\b|no aplica|no procede|no tiene|no indica|pendiente|por digitar/.test(text)) return false;
+    return /\bl\b|l\s*\/|litro|galon|\bha\b|hectarea|dron|avion|avioneta|helicoptero|micronair/.test(text);
+  }
   const compare = (a, b) => String(a).localeCompare(String(b), 'es', { sensitivity: 'base', numeric: true });
   function chemicalReferences(product, catalog) {
     const found = [], visited = new Set(), pending = [...product.molecules];
@@ -78,6 +85,7 @@
   }
   function useMatches(u, f) {
     return (!f.crop || u.cropId === f.crop) && (!f.q || u._search.includes(norm(f.q))) &&
+      (!f.application || f.application !== 'aerial' || hasAerialApproval(u.volumeAir)) &&
       (!f.pestKey || u.pests.some(p => pestKey(p) === f.pestKey)) &&
       (!f.pest || u.pests.some(p => norm(`${p.name} ${p.scientific}`).includes(norm(f.pest))));
   }
@@ -165,5 +173,5 @@
     };
     return '\uFEFF' + [cols.map(cell).join(','), ...rows.map(row => cols.map(col => cell(row[col])).join(','))].join('\r\n');
   }
-  return { norm, missing, compare, pestKey, chemicalReferences, chemicalSummary, hracSummary, iracSummary, createStore, filter, sortItems, paginate, facets, exportRows, csv, CSV_FIELDS };
+  return { norm, missing, hasAerialApproval, compare, pestKey, chemicalReferences, chemicalSummary, hracSummary, iracSummary, createStore, filter, sortItems, paginate, facets, exportRows, csv, CSV_FIELDS };
 });
